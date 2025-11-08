@@ -1,30 +1,80 @@
 # Projet Tutoré recette amap
-DAZA Sasha  
-PEROT Mathis  
-PINOT Gaëtan  
-PRYKHODKO Yehor  
 
-Retro planning (gant)
+Une Association pour le Maintien de l’Agriculture Paysanne (AMAP)
+est une forme de partenariat de proximité entre un groupe de 
+consommateurs et un ou plusieurs producteurs. Les consommateurs 
+s’engagent à acheter à l’avance une partie de la production, 
+généralement sous forme de paniers de légumes, fruits ou autres produits
+de la ferme, distribués régulièrement. 
 
-# log 
+Chaque semaine apporte son lot de surprises et, parfois, de défis
+culinaires. Face à une variété de légumes, certains très familiers et 
+d’autres moins courants, la question se pose souvent : «Que vais-je bien pouvoir cuisiner avec ces ingrédients cette semaine ».
 
-client     -- alice   1234
-producteur -- charlie 1234
+C'est la qu'intervient ce site de partage de recette,
+il est pensé pour facilement partager des recettes 
+et en chercher.
 
-# Liens:
-## Docketu:
-Api: <http://docketu.iutnc.univ-lorraine.fr:12200>
-Adminer: <http://docketu.iutnc.univ-lorraine.fr:12201>
+La distinction avec les autres site de recettes se fait surtout
+avec **la fonctionnalité de recherche, qui permet de renseigner des ingrédients dont on dispose, 
+et le site propose les recettes contenent le plus de ces ingrédient**, afin de pouvoir les utilisers ensemble.  
+Une autre particularité du site est qu'il dispose d'une fonction ou les
+producteurs peuvent renseigner les ingrédients des paniers qu'ils distribuent au Amapiens, ainsi
+que la date à laquel il est disribué, les ingrédients aparaitront ensuite dans le
+"frigo" de l'utilisateur sur le site.  
+Le frigo est l'endroit ou l'utilisateur peut renseigner les ingrédients qu'il possède
+chez lui, les contenus des paniers s'ajoute automatiquement dans le frigo.
+L'utilisateur peut ensuite, en un seul clic, appliquer les ingrédients du frigo à la recherche.  
+La recherche possède aussi un filtre d'exclusion d'ingrédient 
+et un filtre d'allergies, qui exclue les recettes ayant des ingrédients contenant ces allérgènes.  
 
-## TODO PRES:
-- [x] Démo
-- [x] Présentation orale
-- [ ] Vidéo de présentation
-    - [ ] Tuto utilisateur
-    - [ ] Tuto producteur
-    - [ ] Vidéo techniques
-- [ ] CMS gestion (gantt+heure-homme)
-    - [x] Conclusion du projet
+## Contexte
+Ce site à été fait lors d'un projet tutoré étalé sur 4 périodes de 1 semaines au cours de l'année.
+Beaucoup de décisions ont été faites avec un grand manque d'éxpérience et regrétée plus tard.  
+Voici d'autres fonctionnalitées qui était prévues mais qui n'on pas été ajouté par manque de temps.
+- Ajout d'ingrédient par les utilisateurs
+- Gestion des allérgies de l'utilisateurs, des ustensiles requis pour une recette et ceux requis par l'utilisateur
+- Gestion de tags (végé, libanais, dessert...)
+- Possibilité de noter les recettes
+- Outils de modération
+
+## Démo
+
+![Recette](./recette.jpg)
+![Recherche](./searchScreen.jpg)
+![Frigo](./frigo.jpg)
+
+Deux vidéo tutoriel sur le projet, la première pour les utilisateurs normaux, la deuxième pour les producteurs.  
+<!-- <https://www.youtube.com/watch?v=k3eGtsyB86k> -->
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/k3eGtsyB86k?si=RcTEdBr6NDhs6QOu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <https://www.youtube.com/watch?v=CgufWsx-VAY> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CgufWsx-VAY?si=vQB4qV_IU8GHHr1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Groupe
+DAZA       Sasha  
+PEROT      Mathis  
+PINOT      Gaëtan  
+PRYKHODKO  Yehor  
+
+<!-- ## Logins -->
+<!---->
+<!-- client     -- alice   1234 -->
+<!-- producteur -- charlie 1234 -->
+<!---->
+<!-- <!-- # Liens: --> -->
+<!-- <!-- ## Docketu: --> -->
+<!-- <!-- Api: <http://docketu.iutnc.univ-lorraine.fr:12200> --> -->
+<!-- <!-- Adminer: <http://docketu.iutnc.univ-lorraine.fr:12201> --> -->
+<!---->
+<!-- ## TODO PRES: -->
+<!-- - [x] Démo -->
+<!-- - [x] Présentation orale -->
+<!-- - [ ] Vidéo de présentation -->
+<!--     - [ ] Tuto utilisateur -->
+<!--     - [ ] Tuto producteur -->
+<!--     - [ ] Vidéo techniques -->
+<!-- - [ ] CMS gestion (gantt+heure-homme) -->
+<!--     - [x] Conclusion du projet -->
 
 
 
@@ -121,15 +171,15 @@ au travers de l'outil en ligne de commande, il modifierat des
 fichiers de configuration tout seul et c'est très pratique 
 ```
 └── Front
-    ├── public //contient les differents assets static qui ne change pas, comme les logos
-    └── src // contient le code source de l'application
-        └── app
-            ├── Components //Contient les components de l'application
-            ├── Guard //Contient les guards 
-            ├── Interfaces //contient la structure des objet typé custom typescript, utile pour les objet de l'api
-            ├── router //Config des routes,
-            └── Services //service d'appel a l'api en fonction du sujet appelé
-                └── store //store d'auth pour conserver le token d'auth
+    ├── public //contient les differents assets static qui ne change pas, comme les logos
+    └── src // contient le code source de l'application
+        └── app
+            ├── Components //Contient les components de l'application
+            ├── Guard //Contient les guards 
+            ├── Interfaces //contient la structure des objet typé custom typescript, utile pour les objet de l'api
+            ├── router //Config des routes,
+            └── Services //service d'appel a l'api en fonction du sujet appelé
+                └── store //store d'auth pour conserver le token d'auth
 ```
 
 #### Liens docs:  
@@ -158,18 +208,18 @@ L'infrastructure c'est l'accès au services exterieurs, ici simplement la base d
 
 ```
 ├── api
-│   ├── config //fichiers de configuration (bootstrap, routes, dependances)
-│   ├── src // fichier source
-│   │   ├── application //face publique de l'application
-│   │   │   └── action //les actions se charge de traiter la requette, et de retourner les bonnes données
-│   │   ├── core
-│   │   │   ├── dto //format des données entre l'application et le core
-│   │   │   ├── entities //format des données dans la base de donnée
-│   │   │   └── service //la ou la logique de l'application est
-│   │   ├── infrastructure //l'accès a la base de donnée
-│   │   │   ├── entities
-│   │   │   └── repository //chaque classe s'occupe d'une differente partie de la BD
-│   │   └── middleware //middleware pour l'authentification et l'authorization d'accès au ressources
+│   ├── config //fichiers de configuration (bootstrap, routes, dependances)
+│   ├── src // fichier source
+│   │   ├── application //face publique de l'application
+│   │   │   └── action //les actions se charge de traiter la requette, et de retourner les bonnes données
+│   │   ├── core
+│   │   │   ├── dto //format des données entre l'application et le core
+│   │   │   ├── entities //format des données dans la base de donnée
+│   │   │   └── service //la ou la logique de l'application est
+│   │   ├── infrastructure //l'accès a la base de donnée
+│   │   │   ├── entities
+│   │   │   └── repository //chaque classe s'occupe d'une differente partie de la BD
+│   │   └── middleware //middleware pour l'authentification et l'authorization d'accès au ressources
 ```
 
 ### Base de donnée
@@ -192,18 +242,28 @@ modifier la base de donnée. Cependant il est possible
 de modifier directement les table avec les outils d'adminer 
 sans ecrire de requête sql.  
 
-# Vidéo
-## Tuto utilisateur
-- Presentation rapide de la problématique auxquel répond
-le site
-- Inscription/Connexion
-- Abonnement à des producteurs
-- Gestion du profile (desabonner producteur et changer allergnes)
-- Gestion du frigo
-- Recherche de recette
-- Ajout de recette
-## Tuto producteur
-- Inscription/Connexion
-- Création de panier
-- Publication de panier
-- Gestion des ingredients produits
+<!-- # Vidéo -->
+<!-- ## Tuto utilisateur -->
+<!-- - Presentation rapide de la problématique auxquel répond -->
+<!-- le site -->
+<!-- Bonjour, bienvenue dans ce tutoriel pour apprendre à utiliser le site Recettes Amap, -->
+<!-- un site qui vous permet de trouver facilement des recettes pour utiliser les ingredients -->
+<!-- de vos paniers. -->
+<!-- Cela se fait en étapes, vous trouvez le producteur qui fournit votre panier, vous vous abonner  -->
+<!-- à lui sur le site, et lors ce qu'il publie un panier, les ingredients qu'il a renseigné dedans -->
+<!-- se retrouve dans votre frigo virtuel, vous pouvez ensuite facilement selectionner les ingredients -->
+<!-- de votre frigo pour faire une recherche de recette. -->
+<!---->
+<!-- Je vais vous montrer comment utiliser les fonctionnalitées du site -->
+<!-- En premier il faut se connecter -->
+<!-- - Inscription/Connexion -->
+<!-- - Abonnement à des producteurs -->
+<!-- - Gestion du profile (desabonner producteur et changer allergnes) -->
+<!-- - Gestion du frigo -->
+<!-- - Recherche de recette -->
+<!-- - Ajout de recette -->
+<!-- ## Tuto producteur -->
+<!-- - Inscription/Connexion -->
+<!-- - Création de panier -->
+<!-- - Publication de panier -->
+<!-- - Gestion des ingredients produits -->
