@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: {{api}}/recettes/100
+  url: {{api}}/recettes/:id
   body: none
   auth: none
+}
+
+params:path {
+  id: 175
 }
